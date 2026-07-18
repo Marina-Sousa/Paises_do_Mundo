@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Garante que o padding e a borda não aumentem o tamanho total dos elementos */
+
+:root {
+    --azul-principal: #1e3a8a;
+    --azul-medio: #3b82f6;
+    --azul-claro: #dbeafe;
+    --cinza-escuro: #1f2937;
+    --cinza-claro: #f3f4f6;
+    --branco: #ffffff;
+}
+
+/*Coloca as cores como variáveis para facilitar possíveis mudanças no futuro*/
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    min-height: 100vh;
+    /*vh significa "viewport height" (altura da tela visível). 100vh = a altura mínima do body é sempre 100% da tela, mesmo se o conteúdo for curto*/
+    display: flex;
+    flex-direction: column;
+}
+
+/*Corpo principal da página*/
+
+main {
+    flex: 1;
+}
+
+/*Ocupa todo o espaço sobrando empurrando o footer para o final*/
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+/*Container central pra página não ficar esticada*/
+
+h1 {
+    color: var(--azul-principal);
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+/*Títulos*/
+
+header {
+    background-color: var(--azul-principal);
+    padding: 32px 16px;
+    text-align: center;
+}
+
+/*Cabeçalho da página - o bloco*/
+
+header h1 {
+    color: var(--branco);
+    margin: 0;
+    font-size: 2rem;
+}
+
+/*Título do cabeçalho da página*/
+
+#inputPais {
+    padding: 12px 16px;
+    border: 2px solid var(--azul-claro);
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 300px;
+}
+
+/*Caixa de pesquisa*/
+
+#inputPais:focus {
+    outline: none;
+    border-color: var(--azul-medio);
+}
+
+/*Caixa de pesquisa quando selecionada*/
+
+#btnBuscar {
+    padding: 12px 24px;
+    background-color: var(--azul-medio);
+    color: var(--branco);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    /*Muda o cursor de setinha para mãozinha*/
+    margin-left: 8px;
+}
+
+/*Botão de busca*/
+
+#btnBuscar:hover {
+    background-color: var(--azul-principal);
+}
+
+/*Cor ao passar o mouse sobre o botão*/
+
+#resultado {
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/*Parte principal da página*/
+
+#resultado h2 {
+    color: var(--azul-principal);
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/*Subtítulo*/
+
+#resultado p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+/*Informações gerais / parágrafos*/
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+}
+
+/*Coloca as informações em colunas*/
+
+#resultado img {
+    width: 150px;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/*Imagem do país*/
+
+footer {
+    background-color: var(--azul-principal);
+    padding: 32px 16px;
+    text-align: center;
+}
+
+/*Bloco do footer*/
+
+footer h2 {
+    color: var(--branco);
+    margin: 0 0 16px 0;
+    font-size: 1.5rem;
+}
+
+/*Título do footer*/
+
+.links-contato {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/*Bloco dos botões de contato*/
+
+.link-social {
+    background-color: var(--azul-medio);
+    color: var(--cinza-claro);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+/*Informações gerais do bloco de link de contato*/
+
+.link-social:hover {
+    background-color: var(--azul-principal);
+}
+
+/* Aparência ao passar o mouse sobre */
+
+.busca {
+    display: flex;
+    gap: 8px;
+}
+
+@media (max-width: 600px) {
+    .busca {
+        flex-direction: column;
+    }
+
+    #inputPais {
+        width: 100%;
+    }
+}
+
+/*Solução para telas menores como celulares*/
