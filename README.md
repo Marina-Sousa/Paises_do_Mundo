@@ -20,6 +20,11 @@ Uma aplicação web simples e intuitiva feita em **HTML, CSS e JavaScript** que 
 
 ---
 
+🔗 Link do Projeto:
+https://marina-sousa.github.io/Paises_do_Mundo/
+
+---
+
 ## 📂 Estrutura do Projeto
 
 ```text
@@ -27,6 +32,3 @@ Paises_do_Mundo/
 ├── index.html   # Estrutura principal
 ├── paises.css   # Estilos e formatação
 └── paises.js    # Lógica da aplicação e buscas
-
-🔗 Link do Projeto:
-https://marina-sousa.github.io/Paises_do_Mundo/
